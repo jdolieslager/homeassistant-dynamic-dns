@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up Dynamic DNS",
+        "description": "Choose your DNS provider",
+        "data": {
+          "provider": "DNS Provider"
+        }
+      },
+      "provider": {
+        "title": "Provider Configuration",
+        "description": "Enter the details for your DNS provider",
+        "data": {
+          "account_id": "Account ID",
+          "token": "API Token",
+          "zone": "Domain/Zone Name (e.g., example.com)",
+          "record_name": "Record Name (e.g., home)",
+          "update_interval": "Update Interval (seconds)",
+          "username": "Username",
+          "password": "Password",
+          "hostname": "Hostname (e.g., example.no-ip.org)",
+          "domain": "Subdomain - without .duckdns.org (e.g., enter 'example' for example.duckdns.org)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to provider",
+      "invalid_auth": "Invalid authentication",
+      "invalid_host": "Invalid hostname",
+      "invalid_config": "Invalid configuration",
+      "unknown": "Unexpected error occurred"
+    },
+    "abort": {
+      "already_configured": "This DNS record is already configured"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update Interval",
+        "data": {
+          "update_interval": "Update Interval (seconds)"
+        }
+      }
+    }
+  },
+  "services": {
+    "diagnostics": {
+      "name": "Get Diagnostics",
+      "description": "Shows diagnostic information for all Dynamic DNS entries.",
+      "fields": {}
+    }
+  },
+  "entity": {
+    "sensor": {
+      "dynamic_dns": {
+        "state_attributes": {
+          "last_update": {
+            "name": "Last Update Status"
+          },
+          "last_update_success": {
+            "name": "Last Successful Update"
+          }
+        }
+      }
+    }
+  }
+} 

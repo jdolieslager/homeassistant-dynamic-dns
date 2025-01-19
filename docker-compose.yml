@@ -1,0 +1,10 @@
+services:
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./custom_components:/app/custom_components
+      - ./tests:/app/tests
+      - ./pytest.ini:/app/pytest.ini
+      - ./.pylintrc:/app/.pylintrc 

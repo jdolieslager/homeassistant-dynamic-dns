@@ -1,0 +1,69 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dynamic DNS instellen",
+        "description": "Kies je DNS provider",
+        "data": {
+          "provider": "DNS Provider"
+        }
+      },
+      "provider": {
+        "title": "Provider Configuratie",
+        "description": "Voer de gegevens in voor je DNS provider",
+        "data": {
+          "account_id": "Account ID",
+          "token": "API Token",
+          "zone": "Domein/Zone Naam (bijv. example.com)",
+          "record_name": "Record Naam (bijv. home)",
+          "update_interval": "Update Interval (seconden)",
+          "username": "Gebruikersnaam",
+          "password": "Wachtwoord",
+          "hostname": "Hostnaam (bijv. example.no-ip.org)",
+          "domain": "Subdomein - zonder .duckdns.org (bijv. 'example' voor example.duckdns.org)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kan geen verbinding maken met provider",
+      "invalid_auth": "Ongeldige authenticatie",
+      "invalid_host": "Ongeldige hostnaam",
+      "invalid_config": "Ongeldige configuratie",
+      "unknown": "Onverwachte fout opgetreden"
+    },
+    "abort": {
+      "already_configured": "Dit DNS record is al geconfigureerd"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update Interval",
+        "data": {
+          "update_interval": "Update Interval (seconden)"
+        }
+      }
+    }
+  },
+  "services": {
+    "diagnostics": {
+      "name": "Diagnose Ophalen",
+      "description": "Toont diagnostische informatie voor alle Dynamic DNS entries.",
+      "fields": {}
+    }
+  },
+  "entity": {
+    "sensor": {
+      "dynamic_dns": {
+        "state_attributes": {
+          "last_update": {
+            "name": "Laatste Update Status"
+          },
+          "last_update_success": {
+            "name": "Laatste Succesvolle Update"
+          }
+        }
+      }
+    }
+  }
+} 

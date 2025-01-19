@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configura DNS Dinamico",
+        "description": "Scegli il tuo provider DNS",
+        "data": {
+          "provider": "Provider DNS"
+        }
+      },
+      "provider": {
+        "title": "Configurazione Provider",
+        "description": "Inserisci i dettagli del tuo provider DNS",
+        "data": {
+          "account_id": "ID Account",
+          "token": "Token API",
+          "zone": "Nome Dominio/Zona (es: example.com)",
+          "record_name": "Nome Record (es: home)",
+          "update_interval": "Intervallo di Aggiornamento (secondi)",
+          "username": "Nome Utente",
+          "password": "Password",
+          "hostname": "Nome Host (es: example.no-ip.org)",
+          "domain": "Sottodominio - senza .duckdns.org (es: 'example' per example.duckdns.org)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossibile connettersi al provider",
+      "invalid_auth": "Autenticazione non valida",
+      "invalid_host": "Nome host non valido",
+      "invalid_config": "Configurazione non valida",
+      "unknown": "Errore inaspettato"
+    },
+    "abort": {
+      "already_configured": "Questo record DNS è già configurato"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Intervallo di Aggiornamento",
+        "data": {
+          "update_interval": "Intervallo di Aggiornamento (secondi)"
+        }
+      }
+    }
+  },
+  "services": {
+    "diagnostics": {
+      "name": "Ottieni Diagnostica",
+      "description": "Mostra informazioni diagnostiche per tutte le voci DNS dinamiche.",
+      "fields": {}
+    }
+  }
+} 

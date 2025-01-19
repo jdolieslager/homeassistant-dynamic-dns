@@ -1,0 +1,3 @@
+diagnostics:
+  name: Get Diagnostics
+  description: Shows diagnostic information for all Dynamic DNS entries. 

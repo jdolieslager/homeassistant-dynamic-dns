@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configurer DNS Dynamique",
+        "description": "Choisissez votre fournisseur DNS",
+        "data": {
+          "provider": "Fournisseur DNS"
+        }
+      },
+      "provider": {
+        "title": "Configuration du Fournisseur",
+        "description": "Entrez les détails de votre fournisseur DNS",
+        "data": {
+          "account_id": "ID du Compte",
+          "token": "Token API",
+          "zone": "Nom de Domaine/Zone (ex: example.com)",
+          "record_name": "Nom d'Enregistrement (ex: home)",
+          "update_interval": "Intervalle de Mise à Jour (secondes)",
+          "username": "Nom d'Utilisateur",
+          "password": "Mot de Passe",
+          "hostname": "Nom d'Hôte (ex: example.no-ip.org)",
+          "domain": "Sous-domaine DuckDNS"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Impossible de se connecter au fournisseur",
+      "invalid_auth": "Authentification invalide",
+      "invalid_host": "Nom d'hôte invalide",
+      "invalid_config": "Configuration invalide",
+      "unknown": "Erreur inattendue"
+    },
+    "abort": {
+      "already_configured": "Cet enregistrement DNS est déjà configuré"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Intervalle de Mise à Jour",
+        "data": {
+          "update_interval": "Intervalle de Mise à Jour (secondes)"
+        }
+      }
+    }
+  },
+  "services": {
+    "diagnostics": {
+      "name": "Obtenir les Diagnostics",
+      "description": "Affiche les informations de diagnostic pour tous les enregistrements DNS dynamiques.",
+      "fields": {}
+    }
+  }
+} 

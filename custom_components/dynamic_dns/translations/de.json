@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Dynamic DNS einrichten",
+        "description": "Wählen Sie Ihren DNS-Provider",
+        "data": {
+          "provider": "DNS-Provider"
+        }
+      },
+      "provider": {
+        "title": "Provider-Konfiguration",
+        "description": "Geben Sie die Details für Ihren DNS-Provider ein",
+        "data": {
+          "account_id": "Account-ID",
+          "token": "API-Token",
+          "zone": "Domain/Zone-Name (z.B. example.com)",
+          "record_name": "Record-Name (z.B. home)",
+          "update_interval": "Update-Intervall (Sekunden)",
+          "username": "Benutzername",
+          "password": "Passwort",
+          "hostname": "Hostname (z.B. example.no-ip.org)",
+          "domain": "DuckDNS Subdomain"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Verbindung zum Provider fehlgeschlagen",
+      "invalid_auth": "Ungültige Authentifizierung",
+      "invalid_host": "Ungültiger Hostname",
+      "invalid_config": "Ungültige Konfiguration",
+      "unknown": "Unerwarteter Fehler aufgetreten"
+    },
+    "abort": {
+      "already_configured": "Dieser DNS-Eintrag ist bereits konfiguriert"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Update-Intervall",
+        "data": {
+          "update_interval": "Update-Intervall (Sekunden)"
+        }
+      }
+    }
+  },
+  "services": {
+    "diagnostics": {
+      "name": "Diagnose abrufen",
+      "description": "Zeigt Diagnoseinformationen für alle Dynamic DNS-Einträge.",
+      "fields": {}
+    }
+  }
+} 

@@ -1,0 +1,14 @@
+{
+  "domain": "dynamic_dns",
+  "name": "Dynamic DNS",
+  "codeowners": ["@jdolieslager"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/jdolieslager/homeassistant-dynamic-dns",
+  "homeassistant": "2024.1.0",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/jdolieslager/homeassistant-dynamic-dns/issues",
+  "requirements": ["dnspython>=2.4.0"],
+  "version": "1.0.0"
+} 

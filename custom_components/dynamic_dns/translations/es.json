@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Configurar DNS Dinámico",
+        "description": "Elija su proveedor de DNS",
+        "data": {
+          "provider": "Proveedor DNS"
+        }
+      },
+      "provider": {
+        "title": "Configuración del Proveedor",
+        "description": "Ingrese los detalles de su proveedor DNS",
+        "data": {
+          "account_id": "ID de Cuenta",
+          "token": "Token API",
+          "zone": "Nombre de Dominio/Zona (ej: example.com)",
+          "record_name": "Nombre de Registro (ej: home)",
+          "update_interval": "Intervalo de Actualización (segundos)",
+          "username": "Usuario",
+          "password": "Contraseña",
+          "hostname": "Nombre de Host (ej: example.no-ip.org)",
+          "domain": "Subdominio DuckDNS"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No se pudo conectar al proveedor",
+      "invalid_auth": "Autenticación inválida",
+      "invalid_host": "Nombre de host inválido",
+      "invalid_config": "Configuración inválida",
+      "unknown": "Error inesperado"
+    },
+    "abort": {
+      "already_configured": "Este registro DNS ya está configurado"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Intervalo de Actualización",
+        "data": {
+          "update_interval": "Intervalo de Actualización (segundos)"
+        }
+      }
+    }
+  },
+  "services": {
+    "diagnostics": {
+      "name": "Obtener Diagnósticos",
+      "description": "Muestra información de diagnóstico para todas las entradas de DNS dinámico.",
+      "fields": {}
+    }
+  }
+} 
