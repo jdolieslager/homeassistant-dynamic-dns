@@ -16,8 +16,8 @@ test: _build ## Run tests in Docker
 lint: _build ## Run code linting in Docker
 	docker compose run --rm test pylint custom_components/dynamic_dns
 
-validate: _build ## Run hassfest validation in Docker
-	docker compose run --rm test python -m pytest_homeassistant_custom_component.hassfest
+validate:  ## Run hassfest validation in Docker
+	docker run --rm -v ./://github/workspace ghcr.io/home-assistant/hassfest
 
 clean: ## Clean up temporary files and Docker artifacts
 	find . -type d -name __pycache__ -exec rm -r {} +
